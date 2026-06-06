@@ -1,4 +1,4 @@
-# EVIC
+# EVIC ] Monad Blitz Hackathon
 EVIC USD (Wallet Core MVP)
 
 # 🚀 Blockchain Smart Contract Project
