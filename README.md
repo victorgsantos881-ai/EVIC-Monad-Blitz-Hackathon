@@ -45,7 +45,7 @@ Este projeto contém contratos inteligentes desenvolvidos em **Solidity**, inici
 
 # # 📁 Estrutura final
 
-``
+``` 
 web3-platform/
 │
 ├── apps/
@@ -62,7 +62,7 @@ web3-platform/
 ├── .env.example
 ├── package.json
 └── README.md
-``
+``` 
 
 
 
