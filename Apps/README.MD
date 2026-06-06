@@ -2,7 +2,7 @@
 
 ## 📁 ESTRUTURA FINAL
 
----
+``` 
 
 EVIC/
 │
@@ -18,7 +18,7 @@ EVIC/
 ├── .env.example
 ├── package.json
 └── README.md
----
+``` 
 
 # 🎨 1. FRONTEND (Next.js MODERNO)
 
@@ -31,16 +31,16 @@ EVIC/
 
 ## 📦 INSTALAÇÃO
 
----
+``` 
 
 cd apps/web
 npx create-next-app@latest .
 npm install tailwindcss wagmi viem @rainbow-me/rainbowkit framer-motion
----
+``` 
 
 ## 🎨 DESIGN SYSTEM (BRANCO / PRETO / BEGE)
 
----
+``` 
 
 export const theme = {
   colors: {
@@ -50,11 +50,11 @@ export const theme = {
     beigeDark: "#B89B73"
   }
 };
----
+``` 
 
 ## 🧠 UI PRINCIPAL (HOME PAGE)
 
----
+``` 
 
 "use client";
 
@@ -88,7 +88,7 @@ export default function Home() {
     </main>
   );
 }
----
+``` 
 
 #🧩 FEATURES FRONTEND
 ✔ Login com wallet
