@@ -72,7 +72,19 @@ web3-platform/
 cd apps/web
 npx create-next-app@latest web
 npm install wagmi viem ethers @rainbow-me/rainbowkit tailwindcss
-``` ]
+```
 
+## 📄 apps/web/app/page.tsx
 
+```
+export default function Home() {
+  return (
+    <main style={{ background: "#FFFFFF", color: "#0B0B0B" }}>
+      <h1>Web3 Platform</h1>
+      <p>Branco • Preto • Bege Architecture</p>
+    </main>
+  );
+}
+```
+ 
 
