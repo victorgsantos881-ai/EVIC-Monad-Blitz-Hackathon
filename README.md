@@ -7,7 +7,7 @@ Este projeto contém contratos inteligentes desenvolvidos em **Solidity**, inici
 
 ---
 
-# #  📦 Tecnologias Utilizadas
+##  📦 Tecnologias Utilizadas
 
 - Solidity ^0.8.x
 - Node.js
@@ -43,7 +43,7 @@ Este projeto contém contratos inteligentes desenvolvidos em **Solidity**, inici
 
 # 🏗️ REPOSITÓRIO WEB3 COMPLETO (MONOREPO REAL)
 
-# # 📁 Estrutura final
+## 📁 Estrutura final
 
 ``` 
 web3-platform/
@@ -65,7 +65,7 @@ web3-platform/
 ``` 
 # 🌐 2. FRONTEND (Next.js)
 
-# # 📦 Instalação
+## 📦 Instalação
 
 
 ```
