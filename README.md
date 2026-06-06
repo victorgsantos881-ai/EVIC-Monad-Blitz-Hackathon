@@ -7,7 +7,7 @@ Este projeto contém contratos inteligentes desenvolvidos em **Solidity**, inici
 
 ---
 
-## 📦 Tecnologias Utilizadas
+# # 📦 Tecnologias Utilizadas
 
 - Solidity ^0.8.x
 - Node.js
