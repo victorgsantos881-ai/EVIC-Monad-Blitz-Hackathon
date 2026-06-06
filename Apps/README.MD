@@ -99,3 +99,164 @@ export default function Home() {
  ✔  Base para dApp
  ✔  Responsivo mobile-first
 ``` 
+
+# ⚙️ 2. BACKEND (API NODE.JS)
+
+## 📦 Stack
+
+```
+. Node.js
+. Express
+. CORS
+. dotenv
+```
+
+## 📁 apps/api/index.js
+
+```
+
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.json({
+    status: "EVIC API running",
+    version: "1.0.0"
+  });
+});
+
+app.get("/user/:wallet", (req, res) => {
+  res.json({
+    wallet: req.params.wallet,
+    role: "user",
+    status: "active"
+  });
+});
+
+app.listen(4000, () => {
+  console.log("API running on port 4000");
+});
+```
+
+# ⛓️ 3. SMART CONTRACTS (SEGUROS)
+
+## ⚙️ Stack
+
+```
+
+Solidity ^0.8.20
+Hardhat
+OpenZeppelin (segurança)
+```
+
+## 📦 INSTALL
+
+```
+cd contracts
+npm init -y
+npm install --save-dev hardhat @nomicfoundation/hardhat-toolbox
+npm install @openzeppelin/contracts
+npx hardhat
+```
+
+## 📄 contracts/EVICToken.sol
+
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/security/Pausable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+contract EVICToken is ERC20, Pausable, Ownable {
+
+    constructor() ERC20("EVIC Token", "EVIC") {
+        _mint(msg.sender, 1000000 * 10 ** decimals());
+    }
+
+    function pause() public onlyOwner {
+        _pause();
+    }
+
+    function unpause() public onlyOwner {
+        _unpause();
+    }
+
+    function mint(address to, uint256 amount) public onlyOwner {
+        _mint(to, amount);
+    }
+}
+```
+
+🔐 SEGURANÇA
+
+```
+. Pausable contract
+. Ownable access control
+. OpenZeppelin padrão
+. Mint controlado
+```
+
+## ⚙️ 4. HARDHAT CONFIG
+
+```
+require("@nomicfoundation/hardhat-toolbox");
+
+module.exports = {
+  solidity: "0.8.20",
+  networks: {
+    localhost: {
+      url: "http://127.0.0.1:8545"
+    }
+  }
+};
+```
+
+# 🚀 5. COMO CORRER O SISTEMA
+
+## 1️⃣ instalar tudo
+
+
+```
+npm install
+```
+
+## 2️⃣ blockchain local
+
+```
+npx hardhat node
+```
+
+## 3️⃣ deploy contrato
+
+```
+npx hardhat run scripts/deploy.js --network localhost
+```
+
+## 4️⃣ backend
+
+```
+cd apps/api
+node index.js
+```
+
+## 5️⃣ frontend
+
+```
+cd apps/web
+npm run dev
+```
+
+
+
+
+
